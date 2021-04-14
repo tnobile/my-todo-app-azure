@@ -36,6 +36,7 @@ module.exports = {
     },
     addToDo: function (task) {
         task.id = randomId(10);
+        task.status='created';
         data.todos.push(task);
         return {
             message: "task added",
