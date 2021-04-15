@@ -19,7 +19,9 @@ module.exports = {
     },
     deleteTodos: function (context) {
         try {
-            const response = data.deleteToDos(context.req.params.id);
+            const id = context.req.params.id;
+            const response = id !== 'undefined' ? data.deleteToDos(context.req.params.id)
+                : data.resetTodos();
             context.res.status(200).json(response);
         } catch (error) {
             context.res.status(500).send(error);

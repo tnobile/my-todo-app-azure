@@ -28,8 +28,14 @@ export async function editTask(data) {
     return await response.json();
 }
 
+export async function resetTasks() {
+
+    const response = await fetch(`/api/todo/`, { method: 'DELETE' })
+    return await response.json();
+}
 export async function fetchSettings() {
 
     const response = await fetch('/api/settings');
     return await response.json();
 }
+

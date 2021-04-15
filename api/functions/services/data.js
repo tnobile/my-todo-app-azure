@@ -1,33 +1,36 @@
 const randomId = require('random-id')
 
+const data_source = [
+    {
+        id: 1,
+        task: 'learn spanish',
+        status: 'completed'
+    },
+    {
+        id: 2,
+        task: 'take classes',
+        status: 'not started'
+    },
+    {
+        id: 3,
+        task: 'write flashcards',
+        status: 'in progress'
+    },
+    {
+        id: 4,
+        task: 'azure functions',
+        status: 'completed'
+    },
+    {
+        id: 5,
+        task: 'lo que sea',
+        status: 'completed!'
+    },
+
+];
+
 const data = {
-    todos: [
-        {
-            id: 1,
-            task: 'learn spanish',
-            status: 'completed'
-        },
-        {
-            id: 2,
-            task: 'take classes',
-            status: 'not started'
-        },
-        {
-            id: 3,
-            task: 'write flashcards',
-            status: 'in progress'
-        },
-        {
-            id: 4,
-            task: 'azure functions',
-            status: 'completed'
-        },
-        {
-            id: 5,
-            task: 'lo que sea',
-            status: 'completed!'
-        },
-    ]
+    todos: [...data_source]
 };
 
 module.exports = {
@@ -36,7 +39,7 @@ module.exports = {
     },
     addToDo: function (task) {
         task.id = randomId(10);
-        task.status='created';
+        task.status = 'created';
         data.todos.push(task);
         return {
             message: "task added",
@@ -57,6 +60,13 @@ module.exports = {
         });
         return {
             message: "task edited",
+            tasks: data.todos.length
+        }
+    },
+    resetTodos: function () {
+        data.todos = [...data_source];
+        return {
+            message: "tasks reset",
             tasks: data.todos.length
         }
     }
