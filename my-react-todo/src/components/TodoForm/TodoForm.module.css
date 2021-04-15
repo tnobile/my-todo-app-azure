@@ -1,0 +1,8 @@
+.todo-input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: left;
+}
