@@ -4,7 +4,7 @@ import { createTask, deleteTask, editTask, fetchSettings, getAllTasks } from "..
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => {
-    const [todos, setTodos] = useState(DATA);
+    const [todos, setTodos] = useState([]);
     const [remaining, setRemaining] = useState(0);
     const [numberOfTasks, setNumberOfTasks] = useState([])
     const [isTaskEdited, setTaskEdited] = useState(false);
@@ -68,28 +68,5 @@ const Home = () => {
         </div>
     );
 }
-
-const DATA = [
-    {
-        id: 1,
-        task: 'learn about react',
-        isCompleted: false
-    },
-    {
-        id: 2,
-        task: 'meet friends',
-        isCompleted: false
-    },
-    {
-        id: 3,
-        task: 'build app',
-        isCompleted: false
-    },
-    {
-        id: 4,
-        task: 'learn azure',
-        isCompleted: true
-    },
-]
 
 export default Home;
