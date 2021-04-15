@@ -2,9 +2,6 @@ import React from 'react';
 import Todo from '../Todo/Todo';
 import TodoForm from '../TodoForm/TodoForm'
 import classes from './Todos.module.css';
-import {
-    useHistory
-} from "react-router-dom";
 
 const Todos = (props) => {
 

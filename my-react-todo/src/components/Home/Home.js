@@ -8,7 +8,7 @@ const Home = () => {
     const [remaining, setRemaining] = useState(0);
     const [numberOfTasks, setNumberOfTasks] = useState([])
     const [isTaskEdited, setTaskEdited] = useState(false);
-    const [appSettings, setAppSettings] = useState({});
+    //const [appSettings, setAppSettings] = useState({});
 
     useEffect(() => {
         setRemaining(todos.filter(f => f.isCompleted).length)
@@ -24,7 +24,7 @@ const Home = () => {
     useEffect(() => {
         async function fetchData() {
             const response = await fetchSettings();
-            setAppSettings(response);
+            //setAppSettings(response);
         }
         fetchData();
     }, []);
