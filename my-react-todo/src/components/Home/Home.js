@@ -24,6 +24,7 @@ const Home = () => {
     useEffect(() => {
         async function fetchData() {
             const response = await fetchSettings();
+            console.log(JSON.stringify(response));
             //setAppSettings(response);
         }
         fetchData();
