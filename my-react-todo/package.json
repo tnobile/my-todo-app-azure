@@ -1,6 +1,5 @@
 {
   "name": "my-react-todo",
-  "homepage": "http://tnobile.github.io/my-react-todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
