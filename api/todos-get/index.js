@@ -5,6 +5,6 @@ module.exports = async function (context, req) {
 
     context.res = {
         status: 200,
-        body: todoService.getTodos(context)
+        body: await todoService.getTodos(context)
     };
 }

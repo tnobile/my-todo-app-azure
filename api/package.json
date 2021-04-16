@@ -10,7 +10,9 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "random-id": "^1.0.4"
+    "mongodb": "^3.6.6",
+    "random-id": "^1.0.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@azure/functions": "^1.2.3",

@@ -6,7 +6,7 @@ module.exports = async function (context, req) {
     if (req.body && req.body.task) {
         context.res = {
             status: 200,
-            body: todoService.editTodos(context)
+            body: await todoService.editTodos(context)
         };
     }
     else {

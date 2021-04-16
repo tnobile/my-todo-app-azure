@@ -6,7 +6,7 @@ module.exports = async function (context, req) {
     if (req.params && req.params.id) {
         context.res = {
             status: 200,
-            body: todoService.deleteTodos(context)
+            body: await todoService.deleteTodos(context)
         };
     }
     else {

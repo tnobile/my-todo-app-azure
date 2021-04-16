@@ -17,7 +17,10 @@ const Home = () => {
     useEffect(() => {
         getAllTasks().then(tasks => {
             console.log(`get all tasks:${tasks.length}`);
-            setTodos(tasks.map(t => ({ ...t, isCompleted: t.status === "completed" })));
+            if (tasks !== 'undefined' && Array.isArray(tasks))
+                setTodos(tasks.map(t => ({ ...t, isCompleted: t.status === "completed" })));
+            else
+                console.log(`not array`,tasks );
         });
     }, [isTaskEdited, numberOfTasks])
 
